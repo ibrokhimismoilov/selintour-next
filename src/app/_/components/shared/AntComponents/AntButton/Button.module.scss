@@ -1,0 +1,69 @@
+.button {
+	gap: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s linear;
+
+	span {
+		transition: all 0.3s linear;
+	}
+
+	&Rounded {
+		border-radius: 100px !important;
+	}
+
+	&.lightPrimary {
+		color: var(--iPrimary);
+		border-color: var(--iPrimary);
+		background: var(--iPrimaryLight);
+
+		&:hover {
+			background: var(--iPrimary);
+		}
+	}
+
+	&.xl {
+		height: 52px;
+		font-size: 21px;
+		line-height: 24px;
+		padding: 13px 27px;
+	}
+
+	// &Danger {
+	// 	background-color: var(--iDanger);
+	// 	transition: all 0.3s linear;
+	// 	border: 1px solid var(--iDanger) !important;
+
+	// 	span {
+	// 		color: #fff !important;
+	// 	}
+
+	// 	&:hover {
+	// 		border-color: var(--iDangerDark) !important;
+	// 		background-color: var(--iDangerDark) !important;
+	// 	}
+	// }
+
+	&:hover {
+		span {
+			color: #fff;
+		}
+		background: var(--iPrimary);
+	}
+
+	svg {
+		max-width: 21px;
+		max-height: 21px;
+	}
+
+	&Disabled {
+		color: #777b82;
+		pointer-events: none;
+		background-color: rgba(0, 0, 0, 0.04) !important;
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
+}

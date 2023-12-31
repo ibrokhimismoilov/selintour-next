@@ -1,0 +1,65 @@
+.menus {
+  width: 100%;
+  height: 100%;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+
+  :global {
+    .ant-menu {
+      gap: 8px;
+      height: 100%;
+      justify-content: flex-end;
+      border-bottom: none !important;
+
+      .ant-menu-submenu,
+      .ant-menu-item {
+        border-radius: 5px;
+        padding: 2px 12px;
+        transition: var(--iTransition);
+
+        .ant-menu-title-content {
+          font-family: var(--ff500), sans-serif;
+          font-size: 14px;
+          text-align: center;
+          font-weight: 500;
+          line-height: 22px;
+          letter-spacing: 0em;
+          color: var(--iPrimary);
+          transition: var(--iTransition);
+        }
+
+        &:after {
+          display: none !important;
+        }
+
+        &.ant-menu-item-selected,
+        &:hover {
+          background: var(--iPrimaryLight);
+        }
+      }
+
+      // .ant-menu-submenu {
+      // 	.ant-menu-submenu-title {
+      // 		display: flex;
+      // 		align-items: center;
+
+      // 		& > .anticon {
+      // 			width: 25px;
+      // 			height: 25px;
+      // 			min-width: 25px;
+
+      // 			svg {
+      // 				width: 100%;
+      // 				height: 100%;
+      // 				path {
+      // 					fill: var(--sPrimary) !important;
+      // 				}
+      // 			}
+      // 		}
+      // 	}
+      // }
+    }
+  }
+}

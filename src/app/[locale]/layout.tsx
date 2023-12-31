@@ -1,8 +1,9 @@
 import { Roboto } from "next/font/google";
-import { Layout } from "@/components";
-import { NextIntlClientProvider, useMessages } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
-import StyledComponentsRegistry from "../_lib/AntdRegistry";
+import { NextIntlClientProvider, useMessages } from "next-intl";
+
+import { Layout } from "_/components";
+import StyledComponentsRegistry from "_/lib/AntdRegistry";
 
 const roboto = Roboto({
   weight: ["400", "700"],

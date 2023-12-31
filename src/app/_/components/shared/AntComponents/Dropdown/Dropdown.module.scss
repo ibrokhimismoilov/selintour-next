@@ -1,0 +1,12 @@
+.linkStyle {
+	color: var(--iText);
+	text-decoration: underline;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 28px;
+
+	&:hover {
+		color: var(--iTextDanger);
+	}
+}
