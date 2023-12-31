@@ -1,0 +1,46 @@
+*::before,
+*::after,
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  line-height: 1.6;
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  background: var(--iBgBody);
+  font-size: var(--fs), sans-serif;
+  letter-spacing: 0em;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
