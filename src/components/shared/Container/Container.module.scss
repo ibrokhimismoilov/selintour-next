@@ -1,0 +1,10 @@
+.container {
+	width: 100%;
+	margin: 0 auto;
+	max-width: var(--iContainer);
+	padding-inline: var(--iContainerPadding);
+
+	&.isFluid {
+		max-width: 100%;
+	}
+}
