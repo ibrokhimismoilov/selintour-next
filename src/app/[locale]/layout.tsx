@@ -2,6 +2,7 @@ import { Roboto } from "next/font/google";
 import { Layout } from "@/components";
 import { NextIntlClientProvider, useMessages } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
+import StyledComponentsRegistry from "../_lib/AntdRegistry";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -22,9 +23,11 @@ export default function RootLayout({ children, params: { locale } }: IProps) {
   return (
     <html lang={locale}>
       <body className={roboto.className}>
-        <NextIntlClientProvider messages={messages}>
-          <Layout>{children}</Layout>
-        </NextIntlClientProvider>
+        <StyledComponentsRegistry>
+          <NextIntlClientProvider messages={messages}>
+            <Layout>{children}</Layout>
+          </NextIntlClientProvider>
+        </StyledComponentsRegistry>
       </body>
     </html>
   );

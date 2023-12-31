@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "antd": "^5.12.6",
     "next": "14.0.4",
     "next-intl": "^3.4.0",
     "react": "^18",
