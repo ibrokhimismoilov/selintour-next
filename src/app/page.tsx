@@ -1,7 +1,6 @@
-export default function Home() {
-  return (
-    <main>
-      <h1>Home page</h1>
-    </main>
-  );
+import { redirect } from "next/navigation";
+import { defaultLocale } from "@/config";
+
+export default function RootPage() {
+  redirect(`/${defaultLocale}`);
 }

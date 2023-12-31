@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
 
-const roboto = Roboto({
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-  subsets: ["latin", "cyrillic"],
-  display: "swap",
-});
+interface IProps {
+  children: React.ReactNode;
+}
 
 export const metadata: Metadata = {
   title: "SelinTourInc",
@@ -17,7 +13,7 @@ export const metadata: Metadata = {
         media: "(max-width: 767px)",
         url: "./favicon/favicon.ico",
         href: "./favicon/favicon.ico",
-        sizes: "64x64 32x32 24x24 16x16",
+        sizes: "64x64 32x32 24x24 16x16 8x8",
         type: "image/x-icon",
       },
       {
@@ -38,19 +34,8 @@ export const metadata: Metadata = {
   },
 };
 
-interface IProps {
-  children: React.ReactNode;
-}
-
 import "@/assets/styles/main.scss";
-import { Layout } from "@/components";
 
 export default function RootLayout({ children }: IProps) {
-  return (
-    <html lang="en">
-      <body className={roboto.className}>
-        <Layout>{children}</Layout>
-      </body>
-    </html>
-  );
+  return children;
 }
