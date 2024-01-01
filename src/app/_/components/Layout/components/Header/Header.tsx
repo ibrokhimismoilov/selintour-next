@@ -3,10 +3,11 @@ import { useTranslations } from "next-intl";
 import { MenuOutlined, LoginOutlined } from "@ant-design/icons";
 
 import classes from "./Header.module.scss";
-import { Language } from "./components";
+import { Language, Menus } from "./components";
 import { AntButton, Container } from "@/app/_/components";
+import Image from "next/image";
 
-// import Logo from "@/assets/images/svg/logo-head.svg";
+import Logo from "@/assets/images/svg/logo-head.svg";
 
 export const Header = () => {
   const t = useTranslations();
@@ -16,12 +17,11 @@ export const Header = () => {
       <Container>
         <div className={classes.inner}>
           <Link href={"/"} className={classes.logo}>
-            Logo
-            {/* <Logo /> */}
+            <Image src={Logo} width={154} height={37} alt="logo" />
           </Link>
 
           <div className={classes.right}>
-            {/* <Menus /> */}
+            <Menus />
 
             <Language />
 

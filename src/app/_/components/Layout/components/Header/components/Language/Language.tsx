@@ -3,17 +3,20 @@
 import { get } from "lodash";
 import Link from "next/link";
 import { MenuProps } from "antd";
-import { useRouter } from "next/router";
+import { useContext } from "react";
 import { usePathname } from "@/navigation";
 import { ItemType } from "antd/es/menu/hooks/useItems";
 
-import { Dropdown } from "@/app/_/components";
+import { Dropdown } from "_/components";
+import { MainContext } from "_/context";
 import { defaultLocale } from "@/config";
 import classes from "./Language.module.scss";
 
 export const Language = () => {
-  const { locale } = useRouter();
+  const { locale } = useContext(MainContext);
   const pathname = usePathname();
+
+  console.log("pathname", pathname);
 
   const items: MenuProps["items"] = [
     {

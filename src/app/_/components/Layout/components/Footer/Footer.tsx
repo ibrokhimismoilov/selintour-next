@@ -1,28 +1,27 @@
-"use client";
-
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
-import { Container } from "@/app/_/components";
+import { Container } from "_/components";
 import classes from "./Footer.module.scss";
 
 import Logo from "@/assets/images/svg/logo-foot.svg";
+import Menu1 from "@/assets/images/svg/footer-menu-location.svg";
+import Menu2 from "@/assets/images/svg/footer-menu-phone.svg";
+import Menu3 from "@/assets/images/svg/footer-menu-mail.svg";
 import Social1 from "@/assets/images/svg/footer-socials-telegram.svg";
 import Social2 from "@/assets/images/svg/footer-socials-instagram.svg";
 import Social3 from "@/assets/images/svg/footer-socials-youtube.svg";
 import Social4 from "@/assets/images/svg/footer-socials-facebook.svg";
-import Menu1 from "@/assets/images/svg/footer-menu-location.svg";
-import Menu2 from "@/assets/images/svg/footer-menu-phone.svg";
-import Menu3 from "@/assets/images/svg/footer-menu-mail.svg";
 
 export const Footer = () => {
   const t = useTranslations();
 
   const socials = [
-    { id: 1, img: <Social1 />, link: "https://t.me/selintour" },
-    { id: 2, img: <Social2 />, link: "https://instagram.com/selintour" },
-    { id: 3, img: <Social3 />, link: "https://youtube.com/c/selintour" },
-    { id: 4, img: <Social4 />, link: "https://facebook.com/selintour" },
+    { id: 1, img: Social1, link: "https://t.me/selintour" },
+    { id: 2, img: Social2, link: "https://instagram.com/selintour" },
+    { id: 3, img: Social3, link: "https://youtube.com/c/selintour" },
+    { id: 4, img: Social4, link: "https://facebook.com/selintour" },
   ];
 
   const nav1 = [
@@ -53,12 +52,12 @@ export const Footer = () => {
           <div className={classes.head}>
             <div className={classes.left}>
               <Link href={"/"} className={classes.logo}>
-                <Logo />
+                <Image src={Logo} width={155} height={37} alt="logo" />
               </Link>
 
               <nav className={classes.list}>
                 <a href="/" target="_blank" className={classes.link}>
-                  <Menu1 />
+                  <Image src={Menu1} alt="address" />
                   <span>{t("1670 17th St Brooklyn, NY 11229")}</span>
                 </a>
                 <a
@@ -66,7 +65,7 @@ export const Footer = () => {
                   target="_blank"
                   className={classes.link}
                 >
-                  <Menu2 />
+                  <Image src={Menu2} alt="tel" />
                   <span>{t("347 944 7186")}</span>
                 </a>
                 <a
@@ -74,7 +73,7 @@ export const Footer = () => {
                   target="_blank"
                   className={classes.link}
                 >
-                  <Menu3 />
+                  <Image src={Menu3} alt="email" />
                   <span>{t("info@selintour.us")}</span>
                 </a>
               </nav>
@@ -123,7 +122,7 @@ export const Footer = () => {
                   target="_blank"
                   className={classes.link}
                 >
-                  {item.img}
+                  <Image src={item.img} width={24} height={24} alt="" />
                 </a>
               ))}
             </nav>

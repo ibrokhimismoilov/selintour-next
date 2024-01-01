@@ -3,7 +3,7 @@
 import { useMemo } from "react";
 import { Menu, Space } from "antd";
 import type { MenuProps } from "antd";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { DownOutlined } from "@ant-design/icons";

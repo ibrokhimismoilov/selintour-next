@@ -4,6 +4,7 @@ import { NextIntlClientProvider, useMessages } from "next-intl";
 
 import { Layout } from "_/components";
 import StyledComponentsRegistry from "_/lib/AntdRegistry";
+import { MainContextPriveder } from "../_/context";
 
 const roboto = Roboto({
   weight: ["400", "700"],
@@ -26,7 +27,11 @@ export default function RootLayout({ children, params: { locale } }: IProps) {
       <body className={roboto.className}>
         <StyledComponentsRegistry>
           <NextIntlClientProvider messages={messages}>
-            <Layout>{children}</Layout>
+            <Layout>
+              <MainContextPriveder locale={locale}>
+                {children}
+              </MainContextPriveder>
+            </Layout>
           </NextIntlClientProvider>
         </StyledComponentsRegistry>
       </body>
