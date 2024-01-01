@@ -52,13 +52,13 @@ export const Footer = () => {
           <div className={classes.head}>
             <div className={classes.left}>
               <Link href={"/"} className={classes.logo}>
-                <Image src={Logo} width={155} height={37} alt="logo" />
+                <Image src={Logo} alt="logo" />
               </Link>
 
               <nav className={classes.list}>
                 <a href="/" target="_blank" className={classes.link}>
-                  <Image src={Menu1} alt="address" />
-                  <span>{t("1670 17th St Brooklyn, NY 11229")}</span>
+                  <Image src={Menu1} alt="addres" />
+                  <span>{t("addres")}</span>
                 </a>
                 <a
                   href="mailto:info@selintour.us"
@@ -66,7 +66,7 @@ export const Footer = () => {
                   className={classes.link}
                 >
                   <Image src={Menu2} alt="tel" />
-                  <span>{t("347 944 7186")}</span>
+                  <span>{t("phone")}</span>
                 </a>
                 <a
                   href="tel:3479447186"
@@ -74,7 +74,7 @@ export const Footer = () => {
                   className={classes.link}
                 >
                   <Image src={Menu3} alt="email" />
-                  <span>{t("info@selintour.us")}</span>
+                  <span>{t("email")}</span>
                 </a>
               </nav>
             </div>

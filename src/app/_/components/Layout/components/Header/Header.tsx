@@ -32,7 +32,7 @@ export const Header = () => {
               path={"/contact"}
               endIcon={<LoginOutlined />}
             >
-              {t("LOG IN")}
+              {t("Log In")}
             </AntButton>
 
             <AntButton

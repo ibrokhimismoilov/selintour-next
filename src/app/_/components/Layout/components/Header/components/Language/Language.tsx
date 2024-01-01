@@ -16,8 +16,6 @@ export const Language = () => {
   const { locale } = useContext(MainContext);
   const pathname = usePathname();
 
-  console.log("pathname", pathname);
-
   const items: MenuProps["items"] = [
     {
       key: "en",
