@@ -52,7 +52,7 @@ export const Footer = () => {
           <div className={classes.head}>
             <div className={classes.left}>
               <Link href={"/"} className={classes.logo}>
-                <Image src={Logo} alt="logo" />
+                <Image priority src={Logo} alt="logo" />
               </Link>
 
               <nav className={classes.list}>
@@ -110,9 +110,7 @@ export const Footer = () => {
             </div>
           </div>
           <div className={classes.bottom}>
-            <p className={classes.info}>
-              {t("Copyright © 2023 Seline Tour INC | IAPP.uz")}
-            </p>
+            <p className={classes.info}>{t("footer-bottom")}</p>
 
             <nav className={classes.socials}>
               {socials.map((item) => (

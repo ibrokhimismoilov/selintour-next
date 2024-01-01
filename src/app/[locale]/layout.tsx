@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { Roboto } from "next/font/google";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { NextIntlClientProvider, useMessages } from "next-intl";
@@ -21,12 +22,13 @@ interface IProps {
 export default function RootLayout({ children, params: { locale } }: IProps) {
   unstable_setRequestLocale(locale);
   const messages = useMessages();
+  const now = new Date();
 
   return (
     <html lang={locale}>
       <body className={roboto.className}>
         <StyledComponentsRegistry>
-          <NextIntlClientProvider messages={messages}>
+          <NextIntlClientProvider now={now} messages={messages}>
             <Layout>
               <MainContextPriveder locale={locale}>
                 {children}

@@ -3,8 +3,6 @@
   "About": "About Us",
   "home": "Home",
   "locale {locale}": "locale {locale}",
-  "Интернет подключен": "Интернет подключен",
-  "Интернет не работает": "Интернет не работает",
   "Log In": "LOG IN",
   "Home": "Home",
   "Our Services": "Our Services",
@@ -22,5 +20,9 @@
   "Navigation": "Navigation",
   "Account": "Account",
   "phone": "347 944 7186",
-  "footer-bottom": "Copyright © 2023 Seline Tour INC | IAPP.uz"
+  "footer-bottom": "Copyright © 2023 Seline Tour INC | IAPP.uz",
+  "OnlineStatus": {
+    "Интернет подключен": "Интернет подключен",
+    "Интернет не работает": "Интернет не работает"
+  }
 }

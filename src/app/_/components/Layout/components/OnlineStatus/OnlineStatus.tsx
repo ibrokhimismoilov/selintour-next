@@ -2,12 +2,12 @@
 
 import { notification } from "antd";
 import { useTranslations } from "next-intl";
-import { memo, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 import { useOnlineStatus } from "@/hooks/custom";
 
-const OnlineStatus = memo(() => {
-  const t = useTranslations();
+const OnlineStatus = () => {
+  const t = useTranslations("OnlineStatus");
   const checkDidMount = useRef(true);
   const isOnline = useOnlineStatus();
   const [api, contextHolder] = notification.useNotification();
@@ -29,9 +29,9 @@ const OnlineStatus = memo(() => {
         placement: "top",
       });
     }
-  }, [isOnline, api]);
+  }, [isOnline, api, t]);
 
   return contextHolder;
-});
+};
 
 export default OnlineStatus;

@@ -7,6 +7,8 @@ export default getRequestConfig(async ({ locale }) => {
   if (!locales.includes(locale as any)) notFound();
 
   return {
+    timeZone: "Asia/Tashkent",
+    now: new Date(),
     messages: (await import(`../messages/${locale}.json`)).default,
   };
 });
